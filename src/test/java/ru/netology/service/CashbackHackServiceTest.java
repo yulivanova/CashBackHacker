@@ -1,23 +1,23 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
-import org.testng.Assert;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class CashbackHackServiceTest {
 
     @Test
     public void shouldBoundary() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 800;
+        int amount = 700;
         int actual = service.remain(amount);
-        int expected = 200;
-        Assert.assertEquals(actual, expected);
+        int expected = 300;
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldBoundary1() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 1700;
+        int amount = 2700;
         int actual = service.remain(amount);
         int expected = 300;
         Assert.assertEquals(actual, expected);
@@ -30,7 +30,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
         Assert.assertEquals(actual, expected);
-}
+    }
 
     @Test
     public void shouldBoundaryZero() {
