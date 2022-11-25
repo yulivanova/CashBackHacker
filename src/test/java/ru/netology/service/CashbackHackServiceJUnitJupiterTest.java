@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class CashbackHackServiceJUnitJupiterTest {
 
-   @Test
+    @Test
     public void shouldBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 700;
